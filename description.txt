@@ -1,0 +1,3 @@
+Title: Day Cycle Events
+Author: Lugnut, Nullable, and Mold
+Callbacks and events for the day/night cycles.
