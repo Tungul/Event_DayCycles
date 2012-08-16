@@ -79,6 +79,9 @@ package dayCycleTime
 	{
 		parent::serverCmdClearAllBricks(%client);
 
+		if(!%client.isAdmin)
+			return;
+
 		DayCyclesDebug("Removing all bricks from list.");
 
 		$DayCycleBrickList = "";
