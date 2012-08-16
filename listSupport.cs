@@ -72,3 +72,18 @@ function doEventsByList(%mode)
 		DayCyclesDebug("Events processed on:" SPC %b);
 	}
 }
+
+function gameConnection::removeEventsByClient(%this)
+{
+	for(%i = 0; %i < getWordCount($DayCycleBrickList); %i++)
+	{
+		%b = getWord($DayCycleBrickList, %i);
+
+		if(getBrickGroupFromObject(%brick).bl_id $= %this.bl_id)
+		{
+			removeItemFromList($DayCycleBrickList, %b);
+		}
+
+		DayCyclesDebug("Events processed on:" SPC %b);
+	}
+}

@@ -83,5 +83,14 @@ package dayCycleTime
 
 		$DayCycleBrickList = "";
 	}
+	
+	function serverCmdClearBricks(%client) // Mold forgot this one. I should tell him about it for his event cmds.
+	{
+		parent::serverCmdClearBricks(%client);
+
+		DayCyclesDebug("Removing all bricks from" SPC %client.getPlayerName() SPC "'s list.");
+
+		%client.removeDayCycleEventsByClient();
+	}
 };
 activatePackage("dayCycleTime");
