@@ -19,8 +19,11 @@
 //- Mold // Asking weird questions
 //- Treynolds // Participated in topic.
 
-//Math help by: (Offset compatibility wouldn't be possible without him. Also, this would run like crap too.)
+//Math help by: (Offset compatibility wouldn't be possible without him. Also, this would run like crap too.) - LOL THIS IS FUNNY BECAUSE IT DID RUN LIKE CRAP BUT THAT WAS MY IDEA
 //- Nullable
+
+//Future Predictor by:
+//- Zack0Wack0
 
 //Event function source stolen without permission from: (it's ok becuz i told him i was gunna do it k?)
 //- Mold
