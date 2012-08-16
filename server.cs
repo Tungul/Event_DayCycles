@@ -19,7 +19,7 @@
 
 $DayCycles::Debug = false; //This allows recording of critical events.
 $DayCycles::Dev = false; //Enables developer modules
-$DayCycles::Version = 11; //This allows version checking
+$DayCycles::Version = 12; //This allows version checking
 
  //Execute everything
  
