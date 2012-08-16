@@ -34,11 +34,11 @@ function getPartOfDayCycle() //Returns 3, 2, 1, 0 for Midnight, Dusk, Noon, Dawn
 	return %part;
 }
 
-function getNextDayCycleTime() //This is used to intelligently determine the schedule wait time.
+function getNextDayCycleTime() // This is used to intelligently determine the schedule wait time.
 {
-	%tod = getDayCycleTime(); //establish a starting point
+	%tod = getDayCycleTime(); // establish a starting point
 
-	%len = dayCycle.dayLength; //establish length of days
+	%len = dayCycle.dayLength; // establish length of days
 
 	//thanks to Zack0Wack0 for this
 	%quarter = mFloatLength(%len / 4, 0);
