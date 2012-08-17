@@ -34,7 +34,7 @@
 //Funny fact: I have no idea what goddamned version I'm on. // Next version number will be generated randomly
 
 $DayCycles::Dev = false; //Enables developer modules
-$DayCycles::Version = 11; //This allows version checking
+$DayCycles::Version = 12; //This allows version checking
 
  //Execute everything
  
