@@ -33,7 +33,6 @@
 
 //Funny fact: I have no idea what goddamned version I'm on. // Next version number will be generated randomly
 
-$DayCycles::Debug = false; //This allows recording of critical events.
 $DayCycles::Dev = false; //Enables developer modules
 $DayCycles::Version = 11; //This allows version checking
 
@@ -47,10 +46,14 @@ exec("./listSupport.cs"); //this keeps a list of what bricks the callbacks shoul
 exec("./package.cs"); //this makes sure to start/stop the tick at the right time.
 exec("./versionSupport.cs"); //this will check a file hosted on dropbox for version info 
 
-function DayCyclesDebug(%str) //this function can be called wherever and it'll spew out debug info if debug is enabled. very useful.
+function DayCyclesDebug(%str) //this function will log data to a debug file.
 {
-	if($DayCycles::Debug) //checks if debug is enabled
-		echo("DayCyclesDbg >" SPC %str); //echoes a line
+	if(!isObject(DayCyclesDebugFO))
+	{
+		new fileObject("DayCyclesDebugFO");
+		DayCyclesDebugFO.openForWrite("config/server/Event_DayCycles/debug.log");
+	}
+	DayCyclesDebugFO.writeLine(">" @ %str);
 }
 
 function serverCmdReloadDayCycles(%client) //reloads the system for testing
