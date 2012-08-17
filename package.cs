@@ -63,7 +63,7 @@ package dayCycleTime
 		parent::serverCmdClearEvents(%client);
 	}
 
-	function fxDtsBrick::onDeath(%brick)
+	function fxDtsBrick::onRemove(%brick) // thanks nullable
 	{
 		if(hasItemOnList($DayCycleBrickList, %brick))
 		{
@@ -74,26 +74,5 @@ package dayCycleTime
 		parent::onDeath(%brick);
 	}
 	//everything pertaining to events in this package is credit to Mold.
-	
-	function serverCmdClearAllBricks(%client) // Mold forgot this one. I should tell him about it for his event cmds.
-	{
-		parent::serverCmdClearAllBricks(%client);
-
-		if(!%client.isAdmin)
-			return;
-
-		DayCyclesDebug("Removing all bricks from list.");
-
-		$DayCycleBrickList = "";
-	}
-	
-	function serverCmdClearBricks(%client) // Mold forgot this one. I should tell him about it for his event cmds.
-	{
-		parent::serverCmdClearBricks(%client);
-
-		DayCyclesDebug("Removing all bricks from" SPC %client.getPlayerName() SPC "'s list.");
-
-		%client.removeDayCycleEventsByClient();
-	}
 };
 activatePackage("dayCycleTime");
