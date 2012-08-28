@@ -48,7 +48,7 @@ package dayCycleTime
 			DayCyclesDebug("Adding brick to event list:" @ %client.wrenchBrick);
 		}
 
-		return parent::fxDtsBrick::addEvent(%delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4);
+		return parent::addEvent(%delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4);
 	}
 	//We have to remove the brick from list when the event is removed from a brick 
 
