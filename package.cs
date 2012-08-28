@@ -48,9 +48,9 @@ package dayCycleTime
 			DayCyclesDebug("Adding brick to event list:" @ %client.wrenchBrick);
 		}
 
-		return parent::aserverCmdAddEvent(%client, %delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4);
+		return parent::serverCmdAddEvent(%client, %delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4);
 	}
-	function fxDtsBrick::addEvent(%delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4)
+	function fxDtsBrick::addEvent(%this, %delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4)
 	{
 		%i1 = inputEvent_GetInputEventIdx("dayCycleOnDawn"); // Forgot to change these in V6. Oops.
 		%i2 = inputEvent_GetInputEventIdx("dayCycleOnNoon");
@@ -63,7 +63,7 @@ package dayCycleTime
 			DayCyclesDebug("Adding brick to event list:" @ %client.wrenchBrick);
 		}
 
-		return parent::addEvent(%delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4);
+		return parent::addEvent(%this, %delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4);
 	}
 	//We have to remove the brick from list when the event is removed from a brick 
 
@@ -86,7 +86,7 @@ package dayCycleTime
 			DayCyclesDebug("Removing brick from event list:" @ %brick);
 		}
 
-		parent::onDeath(%brick);
+		parent::onRemove(%brick);
 	}
 	//everything pertaining to events in this package is credit to Mold.
 };
