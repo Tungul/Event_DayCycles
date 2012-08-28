@@ -53,7 +53,7 @@ function DayCyclesDebug(%str) //this function will log data to a debug file.
 		new fileObject("DayCyclesDebugFO");
 		DayCyclesDebugFO.openForWrite("config/server/Event_DayCycles/debug.log");
 	}
-	DayCyclesDebugFO.writeLine(">" @ %str);
+	DayCyclesDebugFO.writeLine(%str);
 }
 
 function serverCmdReloadDayCycles(%client) //reloads the system for testing
