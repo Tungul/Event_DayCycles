@@ -35,6 +35,21 @@ package dayCycleTime
 
 	//everything pertaining to events in this package is credit to Mold. Thanks Mold!
 	//We have to add the brick to list when the event is added to a brick
+	function serverCmdAddEvent(%client, %delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4)
+	{
+		%i1 = inputEvent_GetInputEventIdx("dayCycleOnDawn"); // Forgot to change these in V6. Oops.
+		%i2 = inputEvent_GetInputEventIdx("dayCycleOnNoon");
+		%i3 = inputEvent_GetInputEventIdx("dayCycleOnDusk");
+		%i4 = inputEvent_GetInputEventIdx("dayCycleOnMidnight");
+
+		if(%input == %i1 || %input == %i2 || %input == %i3 || %input == %i4) // Made it nicer just for Mold.
+		{
+			$DayCycleBrickList = addItemToList($DayCycleBrickList, %client.wrenchBrick);
+			DayCyclesDebug("Adding brick to event list:" @ %client.wrenchBrick);
+		}
+
+		return parent::aserverCmdAddEvent(%client, %delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4);
+	}
 	function fxDtsBrick::addEvent(%delay, %input, %target, %a, %b, %output, %par1, %par2, %par3, %par4)
 	{
 		%i1 = inputEvent_GetInputEventIdx("dayCycleOnDawn"); // Forgot to change these in V6. Oops.
