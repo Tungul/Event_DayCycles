@@ -51,7 +51,7 @@ function getNextDayCycleTime() // This is used to intelligently determine the sc
 
 	%future = (%part + 1) * %quarter - %tod;
 
-	DayCyclesDebug("The future occurs in: " @ %future @ " seconds.");
+	DayCyclesDebug("The future occurs in: " @ %future @ " second(s).");
 
 	%future *= 1000;
 
