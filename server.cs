@@ -34,7 +34,7 @@
 //Funny fact: I have no idea what goddamned version I'm on. // Next version number will be generated randomly
 
 $DayCycles::Dev = false; //Enables developer modules
-$DayCycles::Version = 16; //This allows version checking
+$DayCycles::Version = 17; //This allows version checking
 
  //Execute everything
  
@@ -54,6 +54,10 @@ function DayCyclesDebug(%str) //this function will log data to a debug file.
 		DayCyclesDebugFO.openForWrite("config/server/Event_DayCycles/debug.log");
 	}
 	DayCyclesDebugFO.writeLine(%str);
+	if($DayCycles::Dev)
+	{
+		talk("DEBUG: " @ %str);
+	}
 }
 
 function serverCmdReloadDayCycles(%client) //reloads the system for testing

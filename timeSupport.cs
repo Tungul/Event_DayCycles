@@ -8,7 +8,7 @@ function getDayCycleTime() //Returns the time in seconds from dawn from the curr
 
 	%offset = DayCycle.dayOffset; // this is how much offset is applied to the day.
 
-	%offset = mfloor(%offset * %length); // this calculates how many seconds the offset actually affects, as the offset is defined in a range between 0 and 1.
+	%offset = mfloor(%offset * %length); // this calculates how many seconds the offset actually affects, as the offset is defined in a range between 0 and 1, like a percentage.
 
 	if(%offset != 0)
 		%curTime = (%curTime + %offset) - %length; // this adds the offset into the equation.

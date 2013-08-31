@@ -1,4 +1,5 @@
 // --- Callback functions // For modders
+// A yearish later, no one is using this at all. THANKS LUGNUT.
 
 function onDawn(%this)
 {
