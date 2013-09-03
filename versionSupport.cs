@@ -8,7 +8,9 @@
 // {
 // 	if(%line $= "")
 // 		%headerdone = 1;
-// 	if(%line !$= $DayCycles::Version && %headerdone)
+//  %mod = getField(strReplace(%line, "[]", "\t"), 0);
+//  %version $= getField(strReplace(%line, "[]", "\t"), 1);
+// 	if(%mod $= "Event_DayCycles" && %version !$= $DayCycles::Version && %headerdone)
 // 	{
 // 		messageBoxOK("Event_DayCycles", "Update available! Check the forum topic for more information.");
 // 	}
