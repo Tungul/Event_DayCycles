@@ -68,9 +68,3 @@ function serverCmdReloadDayCycles(%client) //reloads the system for testing
 		exec("./server.cs");
 	}
 }
-
-<<<<<<< HEAD
-// testing git again
-=======
-//testing droidgit
->>>>>>> branch 'master' of https://github.com/Tungul/Event_DayCycles.git
