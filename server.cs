@@ -68,3 +68,5 @@ function serverCmdReloadDayCycles(%client) //reloads the system for testing
 		exec("./server.cs");
 	}
 }
+
+// testing git again
